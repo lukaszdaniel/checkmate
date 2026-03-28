@@ -1,0 +1,14 @@
+src/all_missing.o
+src/any_infinite.o
+src/any_missing.o
+src/any_nan.o
+src/checkmate.so
+src/checks.o
+src/find_nchar.o
+src/guess_type.o
+src/helper.o
+src/init.o
+src/integerish.o
+src/is_sorted.o
+src/qassert.o
+src/which_first.o

@@ -36,6 +36,7 @@ Rboolean any_infinite(SEXP x) {
         case REALSXP: return any_infinite_double(x);
         case CPLXSXP: return any_infinite_complex(x);
         case VECSXP:  return any_infinite_list(x);
+        default: break;
     }
     return FALSE;
 }

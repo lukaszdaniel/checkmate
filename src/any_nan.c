@@ -35,6 +35,7 @@ Rboolean any_nan(SEXP x) {
         case REALSXP: return any_nan_double(x);
         case CPLXSXP: return any_nan_complex(x);
         case VECSXP:  return any_nan_list(x);
+        default: break;
     }
     return FALSE;
 }

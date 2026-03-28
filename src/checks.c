@@ -391,6 +391,7 @@ static inline Rboolean is_scalar_na(SEXP x) {
             case INTSXP: return (INTEGER_RO(x)[0] == NA_INTEGER);
             case REALSXP: return ISNAN(REAL_RO(x)[0]);
             case STRSXP: return (STRING_ELT(x, 0) == NA_STRING);
+            default: break;
         }
     }
     return FALSE;

@@ -91,6 +91,7 @@ R_xlen_t attribute_hidden as_length(SEXP x, const char *vname) {
             if (fabs(xr - nearbyint(xr)) >= INTEGERISH_DEFAULT_TOL)
                 error("Argument '%s' is not close to an integer", vname);
             return (R_xlen_t) xr;
+        default: break;
     }
     error("Argument '%s' must be a length, but is %s", vname, guess_type(x));
 }
@@ -112,6 +113,7 @@ Rboolean is_class_numeric(SEXP x) {
     switch(TYPEOF(x)) {
         case REALSXP: return TRUE;
         case INTSXP: return !inherits(x, "factor");
+        default: break;            
     }
     return FALSE;
 }
